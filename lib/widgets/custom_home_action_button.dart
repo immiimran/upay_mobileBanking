@@ -13,7 +13,13 @@ class CustomHomeActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [Image.asset(icon), Text(label)],
+      children: [
+        Image.asset(icon, width: 50, height: 50),
+        Text(
+          label,
+          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        ),
+      ],
     );
   }
 }

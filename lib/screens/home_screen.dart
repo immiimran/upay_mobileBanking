@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:upay_mobile_banking/utils/colors.dart';
+import 'package:upay_mobile_banking/widgets/custom_home_action_button.dart';
+import 'package:upay_mobile_banking/widgets/slider_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,11 +23,7 @@ class HomeScreen extends StatelessWidget {
           title: Text("Imran Immi"),
           subtitle: Text(
             "01911754060",
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.black.withOpacity(.5),
-              fontWeight: FontWeight.w500,
-            ),
+            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           ),
           trailing: Container(
             width: 80,
@@ -41,15 +40,54 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          GridView.custom(
-            shrinkWrap: true,
-            primary: false,
-            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
+          Container(
+            color: Colors.white,
+            child: GridView.custom(
+              shrinkWrap: true,
+              primary: false,
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+              ),
+              childrenDelegate: SliverChildListDelegate([
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Send Money",
+                ),
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Mobile Recharge",
+                ),
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Cash Out",
+                ),
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Make Payment",
+                ),
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Add Money",
+                ),
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Loan",
+                ),
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Pay bill",
+                ),
+                CustomHomeActionButton(
+                  icon: 'assets/images/logo.png',
+                  label: "Savings",
+                ),
+              ]),
             ),
-            childrenDelegate: SliverChildListDelegate([Column(children: [])]),
           ),
+
+          SliderSection(),
+          SmoothIndicator(offset: 02, count: 4, size: Size(50, 50)),
         ],
       ),
     );
