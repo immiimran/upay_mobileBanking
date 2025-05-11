@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:upay_mobile_banking/screens/home_screen/upay_payment_section.dart';
 import 'package:upay_mobile_banking/utils/colors.dart';
 import 'package:upay_mobile_banking/widgets/custom_home_action_button.dart';
 import 'package:upay_mobile_banking/widgets/slider_section.dart';
@@ -88,6 +89,21 @@ class HomeScreen extends StatelessWidget {
 
           SliderSection(),
           SmoothIndicator(offset: 02, count: 4, size: Size(50, 50)),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Upay Payments",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: sColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          UpayPaymentSection(),
         ],
       ),
     );

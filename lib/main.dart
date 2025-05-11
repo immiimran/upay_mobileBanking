@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:upay_mobile_banking/screens/home_screen.dart';
+import 'package:upay_mobile_banking/screens/home_screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
