@@ -116,6 +116,33 @@ class HomeScreen extends StatelessWidget {
           UpayPaymentSection(),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: sColor,
+        unselectedItemColor: Colors.black,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined, color: pColor),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.history_outlined, color: pColor),
+            label: "History",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_box_outlined, color: pColor),
+            label: "Account",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.inbox_outlined, color: pColor),
+            label: "Inbox",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.more_outlined, color: pColor),
+            label: "More",
+          ),
+        ],
+      ),
     );
   }
 }
