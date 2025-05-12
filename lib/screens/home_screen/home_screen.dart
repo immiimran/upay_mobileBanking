@@ -26,15 +26,25 @@ class HomeScreen extends StatelessWidget {
             "01911754060",
             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           ),
-          trailing: Container(
-            width: 80,
-            height: 30,
-            decoration: BoxDecoration(
-              color: sColor,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Center(
-              child: Text("Balance", style: TextStyle(color: Colors.white)),
+          trailing: GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Container(color: Colors.amberAccent);
+                },
+              );
+            },
+            child: Container(
+              width: 80,
+              height: 30,
+              decoration: BoxDecoration(
+                color: sColor,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Center(
+                child: Text("Balance", style: TextStyle(color: Colors.white)),
+              ),
             ),
           ),
         ),
